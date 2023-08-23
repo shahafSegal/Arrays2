@@ -26,6 +26,112 @@
         vehichlesArr[1]= 'Carnival';
         kitchUtArr[5]='Pan';
 
+        //5
+        function printCountryArr(){
+            console.log(countryArr);
+        }
+        //6
+        function printCountriesInArr(){
+            var i=0
+            do{
+                console.log(countryArr[i]);
+                i++
+            }
+            while(i<countryArr.length);
+        }
+        //7
+        function addFruitsArrEnd(newFruit){
+            fruitsArr.push(newFruit);
+
+        }
+        
+        //19
+        function isInArray(checkedArr,toFind)
+        {
+            var cArrLen= checkedArr.length;
+            for(var i= 0;i<cArrLen;i++)
+            {
+                if(checkedArr[i]==toFind){
+                    return true;
+                }
+            }
+            return false;
+
+        }
+
+        //8
+        function isInFruitArr(findFruit){
+            return isInArray(fruitsArr,findFruit);
+        }
+        //9 
+        function isSameLenKitchUtArr(Arr1){
+            return kitchUtArr.length==Arr1.length
+        }
+        //10
+        function addCountyArrStart_End5(number,newCountry){
+            if (number>5)
+            {
+                countryArr.push(newCountry)
+            }
+            else{
+                countryArr.unshift(newCountry)
+            }
+        }
+        //11
+        function addToKitchArrIfLonger(number,newUtil){
+            if(number>kitchUtArr.length)
+            {
+                kitchUtArr.push(newUtil)
+                console.log(kitchUtArr);
+            }
+            else{
+                console.log("fail to execute order")
+            }
+
+        }
+        //12
+        function makeArrTilNum(){
+            var userNum= +prompt("Enter a number for Array: ")
+            var newArr=[]
+            for(var i=0;i<=userNum;i++)
+            {
+                newArr.push(i)
+            }
+
+            return newArr
+        }
+
+        //13
+        function makeArrTilNumReverse(){
+            var userNum= +prompt("Enter a number for Array: ")
+            var newArr=[]
+            for(var i=0;i<=userNum;i++)
+            {
+                newArr.unshift(i)
+            }
+
+            return newArr
+        }
+        //14
+        function makeArrUserLastNames(){
+            var newArr=[]
+            while(newArr.length<4)
+            {
+                newArr.push(prompt("Enter a Last Name: "))
+            }
+            return newArr
+        }
+        //15
+
+        
+
+        printCountryArr();
+        printCountriesInArr();
+
+        // console.log(makeArrTilNum());
+        // console.log(makeArrTilNumReverse());
+
+
 
 
 
