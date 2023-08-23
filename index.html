@@ -123,7 +123,102 @@
         }
         //15
 
-        
+       //25
+       function getMaxArr(arr1){
+            var max= Number.MIN_SAFE_INTEGER;
+            for(var i=0;i<arr1.length;i++)
+            {
+                if(arr1[i]>max){
+                    max=arr1[i];
+                }
+            }
+            return max;
+
+        }
+        //26
+        function  getMinArr(arr1){
+            var min= Number.MAX_SAFE_INTEGER;
+            for(var i=0;i<arr1.length;i++)
+            {
+                if(arr1[i]<min){
+                    min=arr1[i];
+                }
+            }
+            return min;
+
+        }
+        //27
+        function getSumArr(arr1){
+            var sum=0;
+            for(var i=0;i<arr1.length;i++)
+            {
+                sum+=arr1[i]
+            }
+            return sum
+        }
+        //28
+        function getMinTimesMaxInArr(Array1)
+        {
+            return getMaxArr(Array1)*getMinArr(Array1);
+        }
+
+        //29
+        function getMaxEvenIndex(Array1){
+            var max_index = -1;
+            for(var i=0;i<arr1.length;i++)
+            {
+                if (Array1[i]%2==0){
+                    if(max_index==-1||Array1[max_index]< Array1[i])
+                    {
+                        max_index=i;
+                    }
+                }
+                
+            }
+            return max_index;
+
+        }
+        //30
+        function getSumOfOddArr(Array1){
+            var sum=0;
+            for(var i=0;i<Array1.length;i++)
+            {   
+                if(Array1%2==1)
+                {
+                    sum+=Array1[i]
+                }
+               
+            }
+            return sum
+        }
+        //31
+        function getArrPlusEndName(Array1,newName){
+            Array1.push(newName);
+            return Array1;
+        }
+        //32
+        function getArrPlusStartEmail(Array1,newEmail){
+            Array1.unshift(newEmail);
+            return Array1;
+        }
+
+        //49
+        function makeEvenArr10(){
+            var numsArr=[]
+            var num=0;
+            while(numsArr.length<10){
+                num= +prompt("enter a number")
+                if(num%2==0)
+                {
+                    numsArr.push(num)
+                }
+            }
+            return numsArr
+        }
+
+        var numArr=[231,12,74,32,11,21]
+
+        console.log(numsArr); 
 
         printCountryArr();
         printCountriesInArr();
